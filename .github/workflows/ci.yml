@@ -1,0 +1,36 @@
+name: Titanic Predictor CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Run tests
+        run: pytest tests/ -v --tb=short
+      - name: Validate pipeline
+        run: |
+          python -c "
+          import sys; sys.path.insert(0,'.')
+          from src.data.load import load_data
+          from src.data.clean import clean_data
+          from src.features.engineer import engineer_features
+          df = load_data()
+          df = clean_data(df)
+          df = engineer_features(df)
+          assert 'FamilySize' in df.columns
+          assert 'IsFemale' in df.columns
+          assert df['Survived'].isin([0,1]).all()
+          print(f'Pipeline OK: {df.shape}')
+          "
