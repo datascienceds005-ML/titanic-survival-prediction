@@ -1,0 +1,75 @@
+{
+  "LogisticRegression": {
+    "Accuracy": 0.7486,
+    "Precision": 0.6889,
+    "Recall": 0.5,
+    "F1": 0.5794,
+    "ROC_AUC": 0.8144,
+    "CV_Acc_Mean": 0.7626,
+    "CV_Acc_Std": 0.0181
+  },
+  "DecisionTree": {
+    "Accuracy": 0.7933,
+    "Precision": 0.7551,
+    "Recall": 0.5968,
+    "F1": 0.6667,
+    "ROC_AUC": 0.8403,
+    "CV_Acc_Mean": 0.7485,
+    "CV_Acc_Std": 0.0444
+  },
+  "KNN": {
+    "Accuracy": 0.7598,
+    "Precision": 0.6939,
+    "Recall": 0.5484,
+    "F1": 0.6126,
+    "ROC_AUC": 0.827,
+    "CV_Acc_Mean": 0.7584,
+    "CV_Acc_Std": 0.004
+  },
+  "RandomForest": {
+    "Accuracy": 0.7709,
+    "Precision": 0.6909,
+    "Recall": 0.6129,
+    "F1": 0.6496,
+    "ROC_AUC": 0.8275,
+    "CV_Acc_Mean": 0.7906,
+    "CV_Acc_Std": 0.036
+  },
+  "ExtraTrees": {
+    "Accuracy": 0.7598,
+    "Precision": 0.6939,
+    "Recall": 0.5484,
+    "F1": 0.6126,
+    "ROC_AUC": 0.8233,
+    "CV_Acc_Mean": 0.778,
+    "CV_Acc_Std": 0.0231
+  },
+  "GradientBoosting": {
+    "Accuracy": 0.7821,
+    "Precision": 0.6885,
+    "Recall": 0.6774,
+    "F1": 0.6829,
+    "ROC_AUC": 0.8146,
+    "CV_Acc_Mean": 0.7893,
+    "CV_Acc_Std": 0.0182
+  },
+  "AdaBoost": {
+    "Accuracy": 0.7709,
+    "Precision": 0.7838,
+    "Recall": 0.4677,
+    "F1": 0.5859,
+    "ROC_AUC": 0.8479,
+    "CV_Acc_Mean": 0.7626,
+    "CV_Acc_Std": 0.0134
+  },
+  "XGBoost": {
+    "Accuracy": 0.7765,
+    "Precision": 0.6897,
+    "Recall": 0.6452,
+    "F1": 0.6667,
+    "ROC_AUC": 0.8135,
+    "CV_Acc_Mean": 0.7809,
+    "CV_Acc_Std": 0.0183
+  },
+  "best_model": "DecisionTree"
+}
